@@ -3,6 +3,7 @@
 .main {
     font-family: 'Nunito Sans', sans-serif;
     font-size: small;
+
 }
 
 .title {
@@ -12,7 +13,7 @@
 }
 
 .square {
-    background-color: grey;
+    background-color: #b4b3b3;
     width: auto;
     height: auto;
     border-radius: 25px;
@@ -35,19 +36,39 @@ a {
     color: #D12500;
 }
 
-.button-dark-style-left {
+.button-dark-style {
     border-radius: 1.5mm;
     background-color: black;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Nunito Sans', sans-serif;
+    padding: 1mm;
+    padding-right: 1.5mm;
+    padding-left: 1.5mm;
 }
 
-.button-dark-style-right {
+.button-white-style {
     border-radius: 1.5mm;
-    background-color: black;
+    background-color: rgb(247, 239, 230);
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Nunito Sans', sans-serif;
-    float: right;
+    padding: 1mm;
+    padding-right: 1.5mm;
+    padding-left: 1.5mm;
 }
+
+img {
+    transition: transform .7s ease-in-out;
+}
+
+img:hover {
+    transform: rotate(360deg);
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+:-webkit-scrollbar { width: 12px; } ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 10px; }
