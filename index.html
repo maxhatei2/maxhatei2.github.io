@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kpad: lightweight text editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>kPad</h1>
+    <p><i>a feature-packed text editor while still <15 MB</i></p>
+    <img id="version-badge" src="https://img.shields.io/badge/version-loading-lightgrey?style=for-the-badge" alt="version">
+    <p>supports <b>plugins</b>, <b>URL opening protocols</b>, <b>auto-updating</b>!</p>
+    <a href="https://github.com/maxhatei2/kPad"><img alt="Static Badge" src="https://img.shields.io/badge/github repo-click me-blue"></a>
+
+    <h3>direct download links:</h3>
+    <div>
+        <img src="pkg_icon.svg" alt="pkg icon" width="20">
+        <a href="https://github.com/maxhatei2/kPad/releases/latest/download/kPad-mac_arm64.zip">download mac  silicon</a>
+    </div>
+    <div>
+        <img src="pkg_icon.svg" alt="pkg icon" width="20">
+        <a href="https://github.com/maxhatei2/kPad/releases/latest/download/kPad-mac_x86_64.zip">download mac  intel</a>
+    </div>
+    <div>
+        <img src="pkg_icon.svg" alt="pkg icon" width="20">
+        <a href="https://github.com/maxhatei2/kPad/releases/latest/download/kPad-Windows_x86_64.zip">download windows x64</a>
+    </div>
+    <p>^ all of the above ^ are automatically the latest release.</p>
+
+    <p>for more info, look at the github repo and <a href="https://github.com/maxhatei2/kPad/wiki">wiki</a>.</p>
+
+    <footer>
+        <p id="kpad-version">made by maxhatei2 | </p>
+    </footer>
+    <script>
+        fetch('https://raw.githubusercontent.com/maxhatei2/kPad/refs/heads/main/.kv')
+    .then(response => response.text())
+    .then(version => {
+        document.getElementById('kpad-version').textContent = "made by maxhatei2 | version " + version.trim();
+    })
+    .catch(err => {
+        console.error('failed to load version:', err);
+        document.getElementById('kpad-version').textContent = 'made by maxhatei2 | version: unknown';
+    });
+    fetch('https://raw.githubusercontent.com/maxhatei2/kPad/refs/heads/main/.kv')
+    .then(res => res.text())
+    .then(version => {
+      version = version.trim(); // remove whitespace
+      // update shields.io badge url
+      const badgeUrl = `https://img.shields.io/badge/version-${version}-orange?style=for-the-badge`;
+      document.getElementById('version-badge').src = badgeUrl;
+    })
+    .catch(err => {
+      console.error('failed to fetch kPad version', err);
+      document.getElementById('version-badge').src = 'https://img.shields.io/badge/version-unknown-lightgrey?style=for-the-badge';
+    });
+    </script>
+</body>
+</html>
