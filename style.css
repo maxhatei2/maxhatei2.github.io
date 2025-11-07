@@ -103,3 +103,25 @@ a:hover {
     transform: rotate(-5deg) scale(1.05);
 }
 
+.plugin-card {
+    text-align: center;       /* center all content */
+    padding: 20px;            /* space inside the container */
+    margin: 20px auto;        /* space outside and centered horizontally */
+    max-width: 350px;         /* optional, keeps it readable */
+    background-color: rgba(255, 255, 255, 0.05); /* subtle bg if you want */
+    border-radius: 10px;      /* optional rounded corners */
+}
+
+.plugin-card img {
+    width: 80px;              /* adjust as needed */
+    height: auto;
+    margin-bottom: 12px;      /* space below icon */
+}
+
+.plugin-card h4 {
+    margin-bottom: 8px;       /* space below title */
+}
+
+.plugin-card p {
+    line-height: 1.5;         /* better readability */
+}
