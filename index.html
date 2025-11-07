@@ -7,26 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <div class="header">
+  <div class="text">
     <h1>kPad</h1>
     <p><i>a feature-packed text editor while still <15 MB</i></p>
-    <img id="version-badge" src="https://img.shields.io/badge/version-loading-lightgrey?style=for-the-badge" alt="version">
+  </div>
+  <img src="kPad Dark Logo.png" alt="kPad logo" width="200">
+</div>
+    <img id="version-badge" src="https://img.shields.io/badge/" alt="version">
     <p>supports <b>plugins</b>, <b>URL opening protocols</b>, <b>auto-updating</b>!</p>
-    <a href="https://github.com/maxhatei2/kPad"><img alt="Static Badge" src="https://img.shields.io/badge/github repo-click me-blue"></a>
-
-    <h3>direct download links:</h3>
-    <div>
-        <img src="pkg_icon.svg" alt="pkg icon" width="20">
-        <a href="https://github.com/maxhatei2/kPad/releases/latest/download/kPad-mac_arm64.zip">download mac  silicon</a>
-    </div>
-    <div>
-        <img src="pkg_icon.svg" alt="pkg icon" width="20">
-        <a href="https://github.com/maxhatei2/kPad/releases/latest/download/kPad-mac_x86_64.zip">download mac  intel</a>
-    </div>
-    <div>
-        <img src="pkg_icon.svg" alt="pkg icon" width="20">
-        <a href="https://github.com/maxhatei2/kPad/releases/latest/download/kPad-Windows_x86_64.zip">download windows x64</a>
-    </div>
-    <p>^ all of the above ^ are automatically the latest release.</p>
+    <a href="https://github.com/maxhatei2.kPad/releases/latest/kPad-mac_arm64.zip"><img alt="Static Badge" src="https://img.shields.io/badge/download-mac silicon-orange"></a>
+    <a href="https://github.com/maxhatei2.kPad/releases/latest/kPad-mac_x86_64.zip"><img alt="Static Badge" src="https://img.shields.io/badge/download-mac intel-orange"></a>
+    <a href="https://github.com/maxhatei2.kPad/releases/latest/kPad-Windows_x86_64.zip"><img alt="Static Badge" src="https://img.shields.io/badge/download-windows amd64-orange"></a>
 
     <p>for more info, look at the github repo and <a href="https://github.com/maxhatei2/kPad/wiki">wiki</a>.</p>
 
@@ -55,6 +47,7 @@
       console.error('failed to fetch kPad version', err);
       document.getElementById('version-badge').src = 'https://img.shields.io/badge/version-unknown-lightgrey?style=for-the-badge';
     });
+    
     </script>
 </body>
 </html>

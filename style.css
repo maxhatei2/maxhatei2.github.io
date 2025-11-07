@@ -2,6 +2,12 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     background-color: rgb(29, 29, 29);
+    margin: 0;
+    height: 100vh;                     /* full viewport height */
+    display: flex;                     /* make body a flex container */
+    justify-content: center;           /* center horizontally */
+    align-items: center;               /* center vertically */
+    flex-direction: column;            /* stack elements vertically */
 }
 
 footer p {
@@ -20,3 +26,80 @@ code {
     font-family: monospace;      /* monospace font */
     font-size: 0.95em;   
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;                        /* optional: control width */
+    max-width: 800px;                  /* optional: don’t get too wide */
+}
+
+.header .text {
+    flex: 1;
+}
+
+.header img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 15%;
+}
+
+.header h1 {
+    text-shadow: 0 0 8px orange, 0 0 15px orange;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;       /* stack vertically */
+        align-items: center;          /* center text & logo */
+        text-align: center;
+    }
+
+    .header .text {
+        margin-bottom: 10px;          /* spacing between text and logo */
+    }
+
+    .header img {
+        max-width: 150px;             /* shrink logo for mobile */
+    }
+}
+
+.header, #version-badge, p, a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.8s forwards;
+}
+
+.header { animation-delay: 0.2s; }
+#version-badge { animation-delay: 0.5s; }
+p, a { animation-delay: 0.8s; }
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a, .btn {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffaa00;
+    transform: scale(1.05);
+}
+
+#version-badge:hover {
+    filter: brightness(1.2);
+}
+
+.header img {
+    transition: transform 0.5s ease;
+}
+
+.header img:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
